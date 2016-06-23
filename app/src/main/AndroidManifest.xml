@@ -12,7 +12,6 @@
         <activity
             android:name=".LauncherActivity"
             android:theme="@style/AppTheme">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,11 +24,12 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".SettingActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
