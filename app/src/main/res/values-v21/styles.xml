@@ -3,7 +3,7 @@
 
         <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
                 <!-- Customize your theme here. -->
-                <item name="colorPrimary">@color/material_deep_teal_200</item>
+                <item name="colorPrimary">@color/accent_material_light</item>
                 <item name="colorPrimaryDark">@color/accent_material_light</item>
                 <item name="colorAccent">@color/accent_material_light</item>
                 <item name="android:colorForeground">

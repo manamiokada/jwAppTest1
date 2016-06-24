@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jwtest.mokada.jwapptest1.Home">
+
+
+    <ImageView
+
+        android:id="@+id/banner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-18dp"
+        android:layout_marginTop="-5dp"
+        android:contentDescription="@string/jw_banner"
+        android:src="@drawable/banner" />
+
+    <RelativeLayout
+        android:id="@+id/feed"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_below="@+id/banner"
+        android:background="@color/textBackground">
+
+        <TextView
+            android:id="@+id/content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/main_content_title"
+            android:textColor="@color/text"
+            android:textSize="30sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_title">
+
+            <TextView
+                android:id="@+id/content_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="@string/main_content"
+                android:textSize="20sp" />
+
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -37,7 +37,7 @@
             android:clickable="true"
             android:src="@drawable/gear_setting" />
     </RelativeLayout>
-
+<!--
     <ImageView
 
         android:id="@+id/banner"
@@ -84,12 +84,21 @@
 
         </ScrollView>
     </RelativeLayout>
+-->
+
+    <fragment
+        android:layout_below="@+id/action_bar"
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.jwtest.mokada.jwapptest1.Home"
+        tools:layout="@layout/fragment_home" />
 
     <RelativeLayout
         android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@+id/feed"
+        android:layout_below="@+id/home"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp">
 
@@ -99,7 +108,7 @@
             android:layout_height="27dp"
             android:layout_centerVertical="true"
             android:clickable="true"
-            android:src="@drawable/home" />
+            android:src="@drawable/home_on" />
 
         <ImageView
             android:id="@+id/schedule_button"
