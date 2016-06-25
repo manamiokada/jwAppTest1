@@ -4,6 +4,7 @@
     <string name="main_content_title">News Feed</string>
     <string name="main_content">Upcoming events\nother stuff\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_schedule">Schedule</string>
 
     <!-- Strings related to Settings -->
 
