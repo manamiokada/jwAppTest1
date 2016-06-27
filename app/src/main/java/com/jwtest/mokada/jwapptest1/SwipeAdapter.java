@@ -29,7 +29,7 @@ public class SwipeAdapter extends FragmentPagerAdapter {
         media.setArguments(bundle);
 
         switch(position) {
-            case 0 : return home;
+            case 0: return home;
             case 1: return schedule;
             case 2: return speaker;
             case 3: return media;
