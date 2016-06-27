@@ -37,69 +37,13 @@
             android:clickable="true"
             android:src="@drawable/gear_setting" />
     </RelativeLayout>
-    <!--
-        <ImageView
-
-            android:id="@+id/banner"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/action_bar"
-            android:layout_marginBottom="-18dp"
-            android:layout_marginTop="-5dp"
-            android:contentDescription="@string/jw_banner"
-            android:src="@drawable/banner" />
-
-        <RelativeLayout
-            android:id="@+id/feed"
-            android:layout_width="match_parent"
-            android:layout_height="290dp"
-            android:layout_below="@+id/banner"
-            android:background="@color/textBackground">
-
-            <TextView
-                android:id="@+id/content_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif"
-                android:text="@string/main_content_title"
-                android:textColor="@color/text"
-                android:textSize="30sp" />
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/content_title">
-
-                <TextView
-                    android:id="@+id/content_main"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:text="@string/main_content"
-                    android:textSize="20sp" />
-
-            </ScrollView>
-        </RelativeLayout>
-    -->
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="472dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="462dp"
         android:layout_below="@+id/action_bar"/>
-<!--
-    <fragment
-        android:id="@+id/home"
-        android:name="com.jwtest.mokada.jwapptest1.Home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/action_bar"
-        tools:layout="@layout/fragment_home" />
-        -->
 
     <RelativeLayout
         android:id="@+id/menu"
@@ -116,7 +60,7 @@
             android:layout_height="27dp"
             android:layout_centerVertical="true"
             android:clickable="true"
-            android:src="@drawable/home_on" />
+            android:src="@drawable/home" />
 
         <ImageView
             android:id="@+id/schedule_button"
@@ -148,17 +92,4 @@
             android:clickable="true"
             android:src="@drawable/media" />
     </RelativeLayout>
-<!--
-    <android.gesture.GestureOverlayView
-        android:id="@+id/gestureOverlayView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/home"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/action_bar" />
-        -->
-
 </RelativeLayout>

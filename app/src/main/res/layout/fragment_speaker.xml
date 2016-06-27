@@ -2,27 +2,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/textBackground"
-    tools:context=".ScheduleFragment">
+    android:background="@color/white"
+    tools:context="com.jwtest.mokada.jwapptest1.SpeakerFragment">
 
     <TextView
-        android:id="@+id/schedule_title"
+        android:id="@+id/speaker_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="@string/title_fragment_schedule"
+        android:text="@string/title_fragment_speaker"
         android:textSize="30sp" />
 
     <ScrollView
-        android:id="@+id/schedule_content"
+        android:id="@+id/speaker_content"
         android:layout_width="match_parent"
         android:layout_height="432dp"
-        android:layout_below="@+id/schedule_title">
+        android:layout_below="@+id/speaker_title">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
 
     </ScrollView>
 

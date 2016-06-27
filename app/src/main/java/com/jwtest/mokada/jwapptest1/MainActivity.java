@@ -1,23 +1,16 @@
 package com.jwtest.mokada.jwapptest1;
 
-import android.content.Context;
 import android.content.Intent;
-import android.gesture.GestureOverlayView;
-import android.graphics.Canvas;
-import android.graphics.ColorFilter;
-import android.graphics.drawable.Drawable;
+import android.graphics.Color;
 import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 
-public class MainActivity extends FragmentActivity implements Home.OnFragmentInteractionListener{
+public class MainActivity extends FragmentActivity implements HomeFragment.OnFragmentInteractionListener,
+        ScheduleFragment.OnFragmentInteractionListener, SpeakerFragment.OnFragmentInteractionListener, MediaFragment.OnFragmentInteractionListener {
 
     ViewPager viewPager;
 
@@ -41,9 +34,26 @@ public class MainActivity extends FragmentActivity implements Home.OnFragmentInt
         viewPager = (ViewPager)findViewById(R.id.view_pager);
         SwipeAdapter swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
         viewPager.setAdapter(swipeAdapter);
+        viewPager.setCurrentItem(0);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+            }
 
+            @Override
+            public void onPageSelected(int position) {
+                switch (position) {
+                    case 0 :
+                }
 
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     @Override
