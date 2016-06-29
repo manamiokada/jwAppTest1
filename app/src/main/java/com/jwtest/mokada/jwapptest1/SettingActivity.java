@@ -16,6 +16,7 @@ public class SettingActivity extends AppCompatActivity {
 
 
         final ImageView back = (ImageView)findViewById(R.id.back_button);
+        back.setColorFilter(R.color.buttonPressed);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
