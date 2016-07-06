@@ -9,8 +9,12 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by mokada on 6/25/16.
  */
 public class SwipeAdapter extends FragmentPagerAdapter {
-    public SwipeAdapter(FragmentManager fm) {
+
+    Bundle bundle;
+
+    public SwipeAdapter(FragmentManager fm, Bundle bundle) {
         super(fm);
+        this.bundle = bundle;
     }
 
     @Override
@@ -21,8 +25,7 @@ public class SwipeAdapter extends FragmentPagerAdapter {
         Fragment media = new MediaFragment();
 
 
-        Bundle bundle = new Bundle();
-        bundle.putInt("count", position + 1);
+
         home.setArguments(bundle);
         schedule.setArguments(bundle);
         speaker.setArguments(bundle);
@@ -35,6 +38,7 @@ public class SwipeAdapter extends FragmentPagerAdapter {
             case 3: return media;
             default: return home;
         }
+
     }
 
     @Override

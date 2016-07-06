@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">JesusWalk</string>
     <string name="jw_banner">jw_banner</string>
-    <string name="main_content_title">Welcome to JesusWalk 2016!</string>
+    <string name="main_content_title">Welcome to JesusWalk</string>
     <string name="main_content">Upcoming events\nother stuff\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc\netc</string>
     <string name="title_settings">settings</string>
     <string name="title_fragment_home">home</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
+    android:background="@color/thmBurgundy"
     android:id="@+id/parent"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -45,30 +45,30 @@
         android:layout_width="match_parent"
         android:layout_height="462dp"
         android:layout_below="@+id/action_bar"
-        android:background="@color/buttonPressed"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:background="@color/buttonPressed">
 
         <android.support.v4.view.ViewPager
-            android:background="@color/white"
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="1dp" />
+            android:background="@color/white" />
+            <!--android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"-->
+
 
 
     </RelativeLayout>
-
 
 
     <RelativeLayout
         android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginEnd="20dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp"
         android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp">
+        android:layout_marginStart="25dp">
 
         <RelativeLayout
             android:id="@+id/home"
@@ -96,15 +96,14 @@
         </RelativeLayout>
 
 
-
         <RelativeLayout
             android:id="@+id/schedule"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_toEndOf="@+id/home"
-            android:layout_toRightOf="@+id/home"
             android:layout_marginLeft="42dp"
             android:layout_marginStart="42dp"
+            android:layout_toEndOf="@+id/home"
+            android:layout_toRightOf="@+id/home"
             android:gravity="bottom">
 
             <ImageView
@@ -129,11 +128,11 @@
             android:id="@+id/speaker"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="bottom"
             android:layout_marginLeft="42dp"
             android:layout_marginStart="42dp"
             android:layout_toEndOf="@+id/schedule"
-            android:layout_toRightOf="@+id/schedule">
+            android:layout_toRightOf="@+id/schedule"
+            android:gravity="bottom">
 
             <ImageView
                 android:id="@+id/speaker_button"
@@ -147,8 +146,8 @@
                 android:id="@+id/speaker_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@id/speaker_button"
+                android:layout_centerHorizontal="true"
                 android:text="@string/title_fragment_speaker" />
 
 
@@ -159,11 +158,11 @@
             android:id="@+id/media"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="bottom"
             android:layout_marginLeft="42dp"
             android:layout_marginStart="42dp"
             android:layout_toEndOf="@+id/speaker"
-            android:layout_toRightOf="@+id/speaker">
+            android:layout_toRightOf="@+id/speaker"
+            android:gravity="bottom">
 
             <ImageView
                 android:id="@+id/media_button"
