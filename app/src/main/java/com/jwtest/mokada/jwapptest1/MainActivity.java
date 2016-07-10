@@ -25,10 +25,12 @@ public class MainActivity extends FragmentActivity implements HomeFragment.OnFra
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /**
         final ImageView actionLogo = (ImageView)findViewById(R.id.head);
         actionLogo.setColorFilter(Color.WHITE);
 
 
+         **/
 
 
 
@@ -49,6 +51,7 @@ public class MainActivity extends FragmentActivity implements HomeFragment.OnFra
 
 
 
+        /**
         // Setting button
         final ImageView gear = (ImageView)findViewById(R.id.gear);
         //gear.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
@@ -61,6 +64,7 @@ public class MainActivity extends FragmentActivity implements HomeFragment.OnFra
                 startActivity(i);
             }
         });
+        **/
 
         // Menu buttons
         final ImageView homeButton = (ImageView)findViewById(R.id.home_button);
