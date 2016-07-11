@@ -5,32 +5,40 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.net.Uri;
+import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.support.v7.widget.ToolbarWidgetWrapper;
 
-public class MainActivity extends FragmentActivity implements HomeFragment.OnFragmentInteractionListener,
+public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener,
         ScheduleFragment.OnFragmentInteractionListener, SpeakerFragment.OnFragmentInteractionListener, MediaFragment.OnFragmentInteractionListener {
 
     ViewPager viewPager;
-
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /**
-        final ImageView actionLogo = (ImageView)findViewById(R.id.head);
+
+        final ImageView actionLogo = (ImageView)findViewById(R.id.logo);
         actionLogo.setColorFilter(Color.WHITE);
 
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
 
-         **/
+
+
 
 
 
@@ -66,6 +74,7 @@ public class MainActivity extends FragmentActivity implements HomeFragment.OnFra
         });
         **/
 
+        /**
         // Menu buttons
         final ImageView homeButton = (ImageView)findViewById(R.id.home_button);
         final TextView homeTitle = (TextView)findViewById(R.id.home_title);
@@ -181,12 +190,14 @@ public class MainActivity extends FragmentActivity implements HomeFragment.OnFra
 
             }
         });
+         **/
     }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
 
     }
+
 
 
 }
