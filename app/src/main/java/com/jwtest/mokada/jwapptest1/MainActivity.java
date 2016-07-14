@@ -5,10 +5,13 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.net.Uri;
+import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
@@ -23,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 
     ViewPager viewPager;
     Toolbar toolbar;
+    DrawerLayout drawerLayout;
+    ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,10 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
+        drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
+
+        drawerLayout.setDrawerListener(actionBarDrawerToggle);
 
 
 
@@ -191,6 +200,12 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
             }
         });
          **/
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        actionBarDrawerToggle.syncState();
     }
 
     @Override

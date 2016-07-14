@@ -9,6 +9,10 @@
     <string name="title_fragment_speaker">speakers</string>
     <string name="title_fragment_media">media</string>
 
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
+
+
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
