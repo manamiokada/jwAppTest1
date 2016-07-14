@@ -7,7 +7,9 @@ import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -16,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
     Toolbar toolbar;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
+    FragmentTransaction fragmentTransaction;
+    NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +52,45 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
 
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.main_container, new HomeFragment());
+        fragmentTransaction.commit();
 
+        getSupportActionBar().setTitle("Home");
+
+        navigationView = (NavigationView)findViewById(R.id.navigation_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch(item.getItemId()) {
+                    case R.id.home_id :
+                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.main_container, new HomeFragment());
+                        fragmentTransaction.commit();
+                        getSupportActionBar().setTitle("Home");
+                        item.setChecked(true);
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.schedule_id :
+                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.main_container, new ScheduleFragment());
+                        fragmentTransaction.commit();
+                        getSupportActionBar().setTitle("Schedule");
+                        item.setChecked(true);
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.settings_id :
+                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.main_container, new MediaFragment());
+                        fragmentTransaction.commit();
+                        getSupportActionBar().setTitle("Settings");
+                        item.setChecked(true);
+                        drawerLayout.closeDrawers();
+                        break;
+                }
+                return true;
+            }
+        });
 
 
 

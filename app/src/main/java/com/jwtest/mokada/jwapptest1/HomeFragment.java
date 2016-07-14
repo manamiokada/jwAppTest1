@@ -74,10 +74,12 @@ public class HomeFragment extends Fragment {
         LayoutInflater lf = getActivity().getLayoutInflater();
         View view = lf.inflate(R.layout.fragment_home, container, false);
 
+        /**
         TextView text = (TextView)view.findViewById(R.id.content_main);
         Bundle bundle = this.getArguments();
         text.setText("Width = " + bundle.getFloat("width") + " Height = " + bundle.getFloat("height"));
 
+         **/
 
 
 
