@@ -24,8 +24,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.support.v7.widget.ToolbarWidgetWrapper;
 
-public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener,
-        ScheduleFragment.OnFragmentInteractionListener, SpeakerFragment.OnFragmentInteractionListener, MediaFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity {
 
     ViewPager viewPager;
     Toolbar toolbar;
@@ -47,7 +46,8 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("");
+        getSupportActionBar().setTitle("Home");
+
 
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close);
@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         fragmentTransaction.add(R.id.main_container, new HomeFragment());
         fragmentTransaction.commit();
 
-        getSupportActionBar().setTitle("Home");
 
         navigationView = (NavigationView)findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -73,11 +72,35 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
+                    case R.id.about_id :
+                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.main_container, new AboutFragment());
+                        fragmentTransaction.commit();
+                        getSupportActionBar().setTitle("About");
+                        item.setChecked(true);
+                        drawerLayout.closeDrawers();
+                        break;
                     case R.id.schedule_id :
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_container, new ScheduleFragment());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle("Schedule");
+                        item.setChecked(true);
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.speakers_id :
+                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.main_container, new SpeakerFragment());
+                        fragmentTransaction.commit();
+                        getSupportActionBar().setTitle("Speakers");
+                        item.setChecked(true);
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.media_id :
+                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.main_container, new MediaFragment());
+                        fragmentTransaction.commit();
+                        getSupportActionBar().setTitle("Media");
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
@@ -111,22 +134,6 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         bundle.putFloat("height", dpHeight);
         bundle.putFloat("width", dpWidth);
 
-
-
-        /**
-        // Setting button
-        final ImageView gear = (ImageView)findViewById(R.id.gear);
-        //gear.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
-        gear.setColorFilter(Color.WHITE);
-        gear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(), SettingActivity.class);
-                i.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(i);
-            }
-        });
-        **/
 
         /**
         // Menu buttons
@@ -251,11 +258,6 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         actionBarDrawerToggle.syncState();
-    }
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
     }
 
 
