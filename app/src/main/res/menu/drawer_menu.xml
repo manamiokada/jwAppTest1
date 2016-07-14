@@ -11,18 +11,20 @@
         </item>
 
         <item
+            android:id="@+id/schedule_id"
+            android:title="Schedule"
+            android:icon="@drawable/schedule">
+
+        </item>
+
+        <item
             android:id="@+id/settings_id"
             android:title="Settings"
             android:icon="@drawable/gear_setting">
 
         </item>
 
-        <item
-            android:id="@+id/schedule_id"
-            android:title="Schedule"
-            android:icon="@drawable/schedule">
 
-        </item>
 
 
     </group>

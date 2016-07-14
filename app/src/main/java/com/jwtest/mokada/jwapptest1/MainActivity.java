@@ -40,8 +40,10 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         setContentView(R.layout.activity_main);
 
 
+        /**
         final ImageView actionLogo = (ImageView)findViewById(R.id.logo);
         actionLogo.setColorFilter(Color.WHITE);
+         **/
 
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -81,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                         break;
                     case R.id.settings_id :
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_container, new MediaFragment());
+                        fragmentTransaction.replace(R.id.main_container, new SettingsFragment());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle("Settings");
                         item.setChecked(true);
