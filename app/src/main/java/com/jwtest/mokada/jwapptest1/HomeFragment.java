@@ -44,9 +44,7 @@ public class HomeFragment extends ListFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        LayoutInflater lf = getActivity().getLayoutInflater();
-
-        return lf.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
 
