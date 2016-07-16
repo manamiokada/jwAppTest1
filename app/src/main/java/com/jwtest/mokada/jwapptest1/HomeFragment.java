@@ -4,10 +4,14 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.twitter.sdk.android.tweetui.TweetTimelineListAdapter;
+import com.twitter.sdk.android.tweetui.UserTimeline;
 
 import org.w3c.dom.Text;
 
@@ -15,10 +19,23 @@ import org.w3c.dom.Text;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends ListFragment {
 
     public HomeFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        UserTimeline userTimeline = new UserTimeline.Builder()
+                .screenName("JesusWalk")
+                .build();
+        final TweetTimelineListAdapter adapter = new TweetTimelineListAdapter.Builder(getActivity())
+                .setTimeline(userTimeline)
+                .build();
+        setListAdapter(adapter);
     }
 
 
@@ -28,6 +45,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
 
         LayoutInflater lf = getActivity().getLayoutInflater();
+
         return lf.inflate(R.layout.fragment_home, container, false);
     }
 

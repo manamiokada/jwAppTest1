@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 <!--TODO: Implement list view with parsed twitter feed -->
-
+<!--
     <ImageView
 
         android:id="@+id/banner"
@@ -50,5 +50,15 @@
 
         </ScrollView>
     </RelativeLayout>
+
+    -->
+
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </ListView>
 
 </RelativeLayout>

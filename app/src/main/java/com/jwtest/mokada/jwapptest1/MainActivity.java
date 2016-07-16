@@ -24,6 +24,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.support.v7.widget.ToolbarWidgetWrapper;
 
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+
+import io.fabric.sdk.android.Fabric;
+
 public class MainActivity extends AppCompatActivity {
 
     ViewPager viewPager;
@@ -33,16 +38,20 @@ public class MainActivity extends AppCompatActivity {
     FragmentTransaction fragmentTransaction;
     NavigationView navigationView;
 
+
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "Z14XbX1RLMtNIGUXEgv0zAaDm";
+    private static final String TWITTER_SECRET = "kmZY4fNZUhYWZviretwE6Mw5Os2ksK5J3OKfGeZ6xMy8yDQrTi";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
+
         setContentView(R.layout.activity_main);
 
-
-        /**
-        final ImageView actionLogo = (ImageView)findViewById(R.id.logo);
-        actionLogo.setColorFilter(Color.WHITE);
-         **/
 
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
