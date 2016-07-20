@@ -36,7 +36,6 @@ public class HomeFragment extends ListFragment {
     private int lastTop = 0;
     View headerView;
     ImageView headerImage;
-    TextView headerText;
     TweetTimelineListAdapter adapter;
 
     public void parallax(final View v) {
