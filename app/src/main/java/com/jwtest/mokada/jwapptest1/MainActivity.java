@@ -39,16 +39,11 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
 
 
-    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
-    private static final String TWITTER_KEY = "Z14XbX1RLMtNIGUXEgv0zAaDm";
-    private static final String TWITTER_SECRET = "kmZY4fNZUhYWZviretwE6Mw5Os2ksK5J3OKfGeZ6xMy8yDQrTi";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
-        Fabric.with(this, new Twitter(authConfig));
 
         setContentView(R.layout.activity_main);
 

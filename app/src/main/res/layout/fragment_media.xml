@@ -1,29 +1,44 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/white"
     tools:context="com.jwtest.mokada.jwapptest1.MediaFragment">
-
-    <TextView
-        android:id="@+id/media_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/title_fragment_media"
-        android:textSize="30sp" />
-
     <ScrollView
-        android:id="@+id/media_content"
         android:layout_width="match_parent"
-        android:layout_height="432dp"
-        android:layout_below="@+id/media_title">
-
-        <TextView
+        android:layout_height="match_parent">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JesusWalk 2015: Aftermath"
+                android:id="@+id/album_Aftermath"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+            <ImageView
+                android:layout_below="@+id/album_Aftermath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/media_feed2"
+                android:id="@+id/feed1"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/feed2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/media_feed"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/feed1"/>
+
+        </RelativeLayout>
+
 
 
     </ScrollView>
+
 
 </RelativeLayout>

@@ -19,24 +19,21 @@ public class SwipeAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        Fragment home = new HomeFragment();
-        Fragment schedule = new ScheduleFragment();
-        Fragment speaker = new SpeakerFragment();
-        Fragment media = new MediaFragment();
+        Fragment dayOne = new DayOneFragment();
+        Fragment dayTwo = new DayTwoFragment();
+        Fragment dayThree = new DayThreeFragment();
+        Fragment dayFour = new DayFourFragment();
 
-
-
-        home.setArguments(bundle);
-        schedule.setArguments(bundle);
-        speaker.setArguments(bundle);
-        media.setArguments(bundle);
+        dayOne.setArguments(bundle);
+        dayTwo.setArguments(bundle);
+        dayThree.setArguments(bundle);
 
         switch(position) {
-            case 0: return home;
-            case 1: return schedule;
-            case 2: return speaker;
-            case 3: return media;
-            default: return home;
+            case 0: return dayOne;
+            case 1: return dayTwo;
+            case 2: return dayThree;
+            case 3: return dayFour;
+            default: return dayOne;
         }
 
     }
