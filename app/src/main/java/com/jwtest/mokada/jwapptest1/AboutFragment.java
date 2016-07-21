@@ -67,7 +67,12 @@ public class AboutFragment extends ListFragment {
         aboutList.addAll(Arrays.asList(aboutContent));
         listAdapter = new ArrayAdapter<String>(this.getActivity(), R.layout.simplerow, aboutList);
 
+
         getListView().addHeaderView(headerView);
+
+
+
+
         this.setListAdapter(listAdapter);
         this.getListView().setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override

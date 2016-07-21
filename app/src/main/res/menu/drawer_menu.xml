@@ -23,13 +23,13 @@
             android:icon="@drawable/schedule" >
 
         </item>
-
+<!--
         <item
             android:id="@+id/speakers_id"
             android:title="Speakers"
             android:icon="@drawable/speaker" >
 
-        </item>
+        </item> -->
 
         <item
             android:id="@+id/media_id"

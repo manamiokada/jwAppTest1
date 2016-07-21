@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
+                    /**
                     case R.id.speakers_id :
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_container, new SpeakerFragment());
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
+                     **/
                     case R.id.media_id :
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_container, new MediaFragment());

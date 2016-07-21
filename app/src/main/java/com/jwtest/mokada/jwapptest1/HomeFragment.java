@@ -61,11 +61,8 @@ public class HomeFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        final UserTimeline userTimeline = new UserTimeline.Builder().screenName("NASA").build();
+        final UserTimeline userTimeline = new UserTimeline.Builder().screenName("JesusWalk").build();
         adapter = new TweetTimelineListAdapter.Builder(getActivity()).setTimeline(userTimeline).build();
-        //setListAdapter(adapter);
-
-
 
     }
 
